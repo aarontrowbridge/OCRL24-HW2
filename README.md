@@ -49,9 +49,9 @@ L_grad =
 4. **Assign terms to more variables**:
 ```
 cost_grad = FD.gradient(f, x)
-constraint_jac = transpose(FD.jacobian(c, x))
+constraint_jac_T = transpose(FD.jacobian(c, x))
 
-L_grad = cost_grad + constraint_jac*λ
+L_grad = cost_grad + constraint_jac_T*λ
 ```
 
 ### Export to PDF
