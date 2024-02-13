@@ -45,8 +45,14 @@ L_grad = (FD.gradient(f, x)
 L_grad = 
     FD.gradient(f, x) + transpose(FD.jacobian(c, x))*λ
 ```
+4. **Combine 1-3 to split into more lines**:
+```
+L_grad = 
+    FD.gradient(f, x) +
+    transpose(FD.jacobian(c, x))*λ
+```
 
-4. **Assign terms to more variables**:
+5. **Assign terms to more variables**:
 ```
 cost_grad = FD.gradient(f, x)
 constraint_jac_T = transpose(FD.jacobian(c, x))
@@ -56,7 +62,7 @@ L_grad = cost_grad + constraint_jac_T*λ
 
 ### Export to PDF
 
-Feel free to use any method you'd like to export your Jupyter notebook as a PDF (**with all the cell outputs shown**) and **submit on gradescope**. 
+Feel free to use any method you'd like to export your Jupyter notebook as a PDF (**with all checklist items completed**) and **submit on gradescope**. 
 
 We recommend the following method of converting your Jupyter notebook to a PDF because it requires no additional installs (hopefully). It's slightly involved, but it is the most consistent in our experience.
 
